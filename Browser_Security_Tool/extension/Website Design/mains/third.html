@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="intro-text">
+          <h1>Subscription Plan</h1>
+         
+        </div>
+        <div class="switch-wrapper">
+          <input id="monthly" type="radio" name="switch" checked>
+          <input id="yearly" type="radio" name="switch">
+          <label for="monthly">Monthly</label>
+          <label for="yearly">Yearly</label>
+          <span class="highlighter"></span>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <div>
+                    Select your plan
+                    <div class="svg-wrapper">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 17v-4h-8v-2h8v-4l6 5-6 5z" />
+                      </svg>
+                    </div>
+                  </div>
+                </th>
+                <th>
+                  <div class="heading">Starter</div>
+                  <div class="info">
+                    <div class="price monthly">
+                      <div class="amount">$10 <span>month</span></div>
+                    </div>
+                    <div class="price yearly hide">
+                      <div class="amount">$7 <span>month</span></div>
+                      <div class="billing-msg">billed annually</div>
+                    </div>
+                    <button type="button">Get started</button>
+                  </div>
+                </th>
+                <th>
+                  <div class="heading">Essential</div>
+                  <div class="info">
+                    <div class="popular">Popular</div>
+                    <div class="price monthly">
+                      <div class="amount">$22 <span>month</span></div>
+                    </div>
+                    <div class="price yearly hide">
+                      <div class="amount">$17 <span>month</span></div>
+                      <div class="billing-msg">billed annually</div>
+                    </div>
+                    <button type="button">Get started</button>
+                  </div>
+                </th>
+                <th>
+                  <div class="heading">Professional</div>
+                  <div class="info">
+                    <div class="price monthly">
+                      <div class="amount">$35 <span>month</span></div>
+                    </div>
+                    <div class="price yearly hide">
+                      <div class="amount">$29 <span>month</span></div>
+                      <div class="billing-msg">billed annually</div>
+      
+                    </div>
+      
+                    <button type="button">Get started</button>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Malware and phishing detection</td>
+                <td>
+                  <svg class="starter" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="essential" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="professional" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <td>SSL Protection</td>
+                <td>
+                  <svg class="starter" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="essential" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="professional" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <td>Safe Browsing API</td>
+                <td>
+                  <svg class="starter" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="essential" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="professional" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <td>Multi-factor Authentication</td>
+                <td>
+                  <svg class="starter" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="essential" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="professional" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <td>Network firewall</td>
+                <td>
+                  <svg class="starter" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="essential" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="professional" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <td>API Security</td>
+                <td>
+                  <svg class="not-included" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="essential" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="professional" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <td>Vulnerability Scanning</td>
+                <td>
+                  <svg class="not-included" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="essential" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="professional" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+              </tr>
+              <tr>
+                <td>Content filtering</td>
+                <td>
+                  <svg class="not-included" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="not-included" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z" />
+                  </svg>
+                </td>
+                <td>
+                  <svg class="professional" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+                  </svg>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="page-footer">
+        
+      </footer>
+      <script src="script.js"></script>
+</body>
+</html>

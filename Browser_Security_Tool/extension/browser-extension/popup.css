@@ -1,0 +1,28 @@
+/* popup.css */
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  width: 250px;
+}
+
+#url-info {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+#status {
+  font-weight: bold;
+}
+
+#details {
+  list-style: none;
+  padding: 0;
+}
+
+#details li {
+  margin-bottom: 5px;
+}
