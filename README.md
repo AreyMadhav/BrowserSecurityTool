@@ -1,5 +1,13 @@
 # KnoxGuard Extension
 
+### Team Name: Devwizard
+
+### Team Members:
+- Sakshi Dabral
+- Madhav Tyagi
+- Saurav Kumar
+- Kunal Jha
+
 ## Description
 
 The KnoxGuard Extension is a browser extension that automatically checks the safety of URLs using the VirusTotal API. It allows users to quickly assess the security of websites by fetching information from the VirusTotal database.
@@ -32,13 +40,3 @@ To use the KnoxGuard Extension, follow these steps:
 2. Enter the URL you want to check in the input field.
 3. Click the "Check URL" button.
 4. The extension will fetch information from the VirusTotal API and display the results in the popup.
-
-## Team
-
-### Team Name: Devwizard
-
-### Team Members:
-- Sakshi Dabral
-- Madhav Tyagi
-- Saurav Kumar
-- Kunal Jha
