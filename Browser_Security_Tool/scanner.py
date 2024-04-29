@@ -31,7 +31,7 @@ class VirusTotalScannerApp:
         self.result_text = tk.Text(master)
         self.result_text.pack()
 
-        self.vt_scanner = VirusTotalScanner(api_key='14939d28a67da157e647fa5121adb7e52bd35cc7d05efd37dc49ad537dc4beb2')
+        self.vt_scanner = VirusTotalScanner(api_key='')
 
         # Check clipboard for URL changes every 1 second
         self.master.after(1000, self.check_clipboard)
