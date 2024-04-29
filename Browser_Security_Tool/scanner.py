@@ -1,6 +1,9 @@
 import requests
 import tkinter as tk
 from tkinter import messagebox
+import webbrowser
+import pyperclip
+import time
 
 class VirusTotalScanner:
     def __init__(self, api_key):
@@ -28,7 +31,18 @@ class VirusTotalScannerApp:
         self.result_text = tk.Text(master)
         self.result_text.pack()
 
-        self.vt_scanner = VirusTotalScanner(api_key='')
+        self.vt_scanner = VirusTotalScanner(api_key='14939d28a67da157e647fa5121adb7e52bd35cc7d05efd37dc49ad537dc4beb2')
+
+        # Check clipboard for URL changes every 1 second
+        self.master.after(1000, self.check_clipboard)
+
+    def check_clipboard(self):
+        clipboard_content = pyperclip.paste()
+        if clipboard_content.startswith("http://") or clipboard_content.startswith("https://"):
+            self.url_entry.delete(0, tk.END)
+            self.url_entry.insert(0, clipboard_content)
+            self.scan_url()
+        self.master.after(1000, self.check_clipboard)
 
     def scan_url(self):
         url = self.url_entry.get()
@@ -42,10 +56,17 @@ class VirusTotalScannerApp:
     def display_result(self, result):
         self.result_text.delete(1.0, tk.END)
         if result.get('response_code') == 1:
+            harmless_engines = []
             harmful_engines = []
-            for engine, result in harmless_engines:
-                self.result_text.insert(tk.END, f"{engine}: {result}\n")
-            self.result_text.insert(tk.END, "\nHarmful Engines:\n")
+            for engine, res in result['scans'].items():
+                if res['result'] == 'clean site' or res['result'] == 'unrated site':
+                    harmless_engines.append((engine, res['result']))
+                else:
+                    harmful_engines.append((engine, res['result']))
+            self.result_text.insert(tk.END, f"Harmless Engines ({len(harmless_engines)}):\n")
+            self.result_text.insert(tk.END, "Count: {}\n".format(len(harmless_engines)))
+            self.result_text.insert(tk.END, "\nHarmful Engines ({len(harmful_engines)}):\n")
+            self.result_text.insert(tk.END, "Count: {}\n".format(len(harmful_engines)))
             for engine, result in harmful_engines:
                 self.result_text.insert(tk.END, f"{engine}: {result}\n")
         else:
