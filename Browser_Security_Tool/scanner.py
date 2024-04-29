@@ -28,7 +28,7 @@ class VirusTotalScannerApp:
         self.result_text = tk.Text(master)
         self.result_text.pack()
 
-        self.vt_scanner = VirusTotalScanner(api_key='77d7872ee5d7deffe29d3d5f9a2860c82f621222c6531cff92636e8cbc1f9567')
+        self.vt_scanner = VirusTotalScanner(api_key='')
 
     def scan_url(self):
         url = self.url_entry.get()
