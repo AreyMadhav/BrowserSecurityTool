@@ -17,7 +17,7 @@ class VirusTotalScanner:
 class VirusTotalScannerApp:
     def __init__(self, master):
         self.master = master
-        master.title("VirusTotal URL Scanner")
+        master.title("KNoxguard URL Scanner")
 
         self.label = tk.Label(master, text="Enter URL:")
         self.label.pack()
@@ -64,9 +64,7 @@ class VirusTotalScannerApp:
                 else:
                     harmful_engines.append((engine, res['result']))
             self.result_text.insert(tk.END, f"Harmless Engines ({len(harmless_engines)}):\n")
-            self.result_text.insert(tk.END, "Count: {}\n".format(len(harmless_engines)))
-            self.result_text.insert(tk.END, "\nHarmful Engines ({len(harmful_engines)}):\n")
-            self.result_text.insert(tk.END, "Count: {}\n".format(len(harmful_engines)))
+            self.result_text.insert(tk.END, f"\nHarmful Engines ({len(harmful_engines)}):\n")
             for engine, result in harmful_engines:
                 self.result_text.insert(tk.END, f"{engine}: {result}\n")
         else:
