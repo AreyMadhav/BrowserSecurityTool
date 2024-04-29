@@ -28,7 +28,7 @@ class VirusTotalScannerApp:
         self.result_text = tk.Text(master)
         self.result_text.pack()
 
-        self.vt_scanner = VirusTotalScanner(api_key='')
+        self.vt_scanner = VirusTotalScanner(api_key='77d7872ee5d7deffe29d3d5f9a2860c82f621222c6531cff92636e8cbc1f9567')
 
     def scan_url(self):
         url = self.url_entry.get()
@@ -42,11 +42,14 @@ class VirusTotalScannerApp:
     def display_result(self, result):
         self.result_text.delete(1.0, tk.END)
         if result.get('response_code') == 1:
-            self.result_text.insert(tk.END, "VirusTotal Scan Result:\n")
-            for key, value in result.items():
-                self.result_text.insert(tk.END, f"{key}: {value}\n")
+            harmful_engines = []
+            for engine, result in harmless_engines:
+                self.result_text.insert(tk.END, f"{engine}: {result}\n")
+            self.result_text.insert(tk.END, "\nHarmful Engines:\n")
+            for engine, result in harmful_engines:
+                self.result_text.insert(tk.END, f"{engine}: {result}\n")
         else:
-            self.result_text.insert(tk.END, f"Scan Result: {result.get('verbose_msg', 'Unknown error')}\n")
+            self.result_text.insert(tk.END, f"VirusTotal Scan Result: {result.get('verbose_msg', 'Unknown error')}\n")
 
 def main():
     root = tk.Tk()
